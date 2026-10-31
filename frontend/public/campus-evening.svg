@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="900" y1="0" x2="900" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#183965"/><stop offset=".46" stop-color="#244c76"/><stop offset=".7" stop-color="#d08c67"/><stop offset="1" stop-color="#142f48"/></linearGradient>
+    <linearGradient id="glass" x1="1200" y1="180" x2="1200" y2="690" gradientUnits="userSpaceOnUse"><stop stop-color="#a7c7d9"/><stop offset=".47" stop-color="#f2bc79"/><stop offset="1" stop-color="#4c7892"/></linearGradient>
+    <linearGradient id="ground" x1="900" y1="620" x2="900" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#254a47"/><stop offset="1" stop-color="#071d2b"/></linearGradient>
+    <filter id="glow" x="600" y="100" width="1000" height="650" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="48"/></filter>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1800v900H0z"/>
+  <circle cx="1100" cy="390" r="330" fill="#68a5d8" opacity=".2" filter="url(#glow)"/>
+  <path fill="#081d32" opacity=".65" d="m0 480 165-105 144 66 171-151 122 108 137-86 111 95 153-132 135 105 114-70 156 121 129-88 163 89v368H0z"/>
+  <path fill="#092035" d="M0 565h1800v335H0z"/>
+  <path fill="#18384b" d="M720 262h811v422H720z"/>
+  <path fill="#24495b" d="M700 240h850l-36 34H720z"/>
+  <path fill="#526d76" d="M742 290h760v355H742z"/>
+  <path fill="url(#glass)" d="M760 308h724v312H760z"/>
+  <path fill="#263f52" d="M760 308h724v29H760z"/>
+  <g fill="#18394f" opacity=".9"><path d="M836 307h20v317h-20zM927 307h20v317h-20zM1018 307h20v317h-20zM1109 307h20v317h-20zM1200 307h20v317h-20zM1291 307h20v317h-20zM1382 307h20v317h-20zM1473 307h20v317h-20z"/><path d="M754 390h737v16H754zM754 477h737v16H754zM754 564h737v16H754z"/></g>
+  <path fill="#dae5e7" d="M1115 216h194v67h-194z"/>
+  <path fill="#183650" d="M1122 223h180v53h-180z"/>
+  <text x="1212" y="260" fill="#eaf7ff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="5" text-anchor="middle">CIT</text>
+  <path fill="#172f42" d="M1081 553h104v131h-104z"/><path fill="#f5c37b" d="M1097 568h72v115h-72z"/><path fill="#17334a" d="M1130 568h8v115h-8z"/>
+  <path fill="#9ab8c0" d="M698 675h876v26H698z"/><path fill="#344f59" d="M690 700h895v16H690z"/>
+  <path fill="url(#ground)" d="M0 715h1800v185H0z"/>
+  <path stroke="#718e83" stroke-opacity=".4" stroke-width="4" d="M620 900c190-94 326-155 522-185 192-30 427-4 658 61"/>
+  <path stroke="#d9c39c" stroke-opacity=".48" stroke-width="3" d="M718 900c198-100 344-157 513-176 158-18 352 1 553 48"/>
+  <g fill="#081d2b"><path d="M330 720h18V530h-18zM292 584h96v18h-96zM300 545l42-76 42 76zM285 580l32-60 32 60zM342 580l32-60 32 60z"/><path d="M520 725h15V573h-15zM491 616h72v15h-72zM497 581l31-56 31 56zM486 613l24-45 24 45zM528 613l24-45 24 45z"/><path d="M1612 720h19V548h-19zM1577 597h91v16h-91zM1584 559l37-66 38 66zM1570 594l27-52 27 52zM1620 594l27-52 27 52z"/></g>
+  <g fill="#f6c881" opacity=".86"><circle cx="351" cy="604" r="5"/><circle cx="529" cy="637" r="4"/><circle cx="1620" cy="614" r="5"/><circle cx="1098" cy="687" r="5"/><circle cx="1170" cy="687" r="5"/><circle cx="825" cy="688" r="4"/><circle cx="1450" cy="688" r="4"/></g>
+  <path fill="#071d30" opacity=".34" d="M0 0h1800v900H0z"/>
+</svg>

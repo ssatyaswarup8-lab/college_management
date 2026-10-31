@@ -1,0 +1,7 @@
+### Today's personal agenda
+GET http://localhost:5000/api/student/me/today
+Authorization: Bearer {{student_access_token}}
+
+### Personal agenda for a selected date
+GET http://localhost:5000/api/student/me/agenda?date=2026-11-02
+Authorization: Bearer {{student_access_token}}

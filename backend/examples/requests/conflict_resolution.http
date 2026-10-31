@@ -1,0 +1,13 @@
+### Analyze the bundled MA101 session with a too-small room proposal
+POST http://localhost:5000/api/conflicts/analyze
+Authorization: Bearer {{admin_access_token}}
+Content-Type: application/json
+
+< ./conflict_analyze.json
+
+### Generate valid solutions and explanatory near misses
+POST http://localhost:5000/api/conflicts/{{conflict_id}}/solutions
+Authorization: Bearer {{admin_access_token}}
+Content-Type: application/json
+
+< ./conflict_solutions.json

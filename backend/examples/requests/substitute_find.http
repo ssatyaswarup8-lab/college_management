@@ -1,0 +1,6 @@
+### Find eligible substitutes for MA101-AB-L1
+POST http://localhost:5000/api/faculty/substitutes/find
+Authorization: Bearer {{admin_access_token}}
+Content-Type: application/json
+
+< ./substitute_find.json

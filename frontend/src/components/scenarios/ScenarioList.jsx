@@ -1,0 +1,4 @@
+export default function ScenarioList({ scenarios = [], selectedId, onSelect }) {
+  if (!scenarios.length) return <div className="rounded-xl border border-dashed border-slate-300 bg-white p-5 text-sm text-slate-600">No saved scenarios yet. Create one to simulate a temporary change.</div>
+  return <ul className="space-y-2">{scenarios.map((scenario,index) => { const id=scenario.id??scenario.scenarioId??scenario.scenario_id; return <li key={id??index}><button aria-pressed={selectedId===id} className={`w-full rounded-xl border p-4 text-left transition ${selectedId===id?'border-teal-700 bg-teal-50':'border-slate-200 bg-white hover:border-slate-300'}`} onClick={()=>onSelect?.(id)} type="button"><span className="block text-sm font-semibold text-slate-900">{scenario.name??scenario.title??id??'Scenario'}</span><span className="mt-1 block text-xs text-slate-500">{scenario.type??scenario.status??'Draft'}</span></button></li> })}</ul>
+}

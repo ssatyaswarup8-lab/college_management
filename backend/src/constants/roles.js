@@ -1,0 +1,9 @@
+export const ROLES = Object.freeze({
+  ADMIN: 'ADMIN',
+  DEPARTMENT_COORDINATOR: 'DEPARTMENT_COORDINATOR',
+  FACULTY: 'FACULTY',
+  CLUB_REPRESENTATIVE: 'CLUB_REPRESENTATIVE',
+  STUDENT: 'STUDENT',
+});
+
+export const ROLE_VALUES = Object.freeze(Object.values(ROLES));

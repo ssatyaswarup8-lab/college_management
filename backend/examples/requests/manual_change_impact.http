@@ -1,0 +1,13 @@
+### Analyze the manual timetable change
+POST http://localhost:5000/api/admin/schedule/session/impact
+Authorization: Bearer {{admin_access_token}}
+Content-Type: application/json
+
+< ./manual_change_impact.json
+
+### Analyze a cross-day change to compare both affected faculty days
+POST http://localhost:5000/api/admin/schedule/session/impact
+Authorization: Bearer {{admin_access_token}}
+Content-Type: application/json
+
+< ./manual_change_impact_cross_day.json

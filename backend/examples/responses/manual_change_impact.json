@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "message": "Change impact analyzed",
+  "data": {
+    "activeScheduleVersion": { "id": "<active-schedule-version-id>", "versionNumber": 1 },
+    "valid": true,
+    "sessionId": "MA101-AB-L1",
+    "before": { "sessionId": "MA101-AB-L1", "day": "MON", "startPeriod": 2, "roomId": "LH-1" },
+    "after": { "sessionId": "MA101-AB-L1", "day": "MON", "startPeriod": 4, "roomId": "LH-1" },
+    "affectedFaculty": ["F19"],
+    "affectedGroups": ["Y1-A", "Y1-B"],
+    "affectedRooms": ["LH-1"],
+    "impactedSessions": [
+      {
+        "sessionId": "MA101-AB-L1",
+        "courseId": "MA101",
+        "courseTitle": "Calculus and Linear Algebra",
+        "day": "MON",
+        "startPeriod": 4,
+        "roomId": "LH-1",
+        "faculty": { "id": "F19", "name": "Dr. Shalini Gupta" },
+        "groups": [
+          { "id": "Y1-A", "name": "B.Tech Year 1, Section A" },
+          { "id": "Y1-B", "name": "B.Tech Year 1, Section B" }
+        ]
+      }
+    ],
+    "impactedFaculty": [{ "id": "F19", "name": "Dr. Shalini Gupta" }],
+    "impactedGroups": [
+      { "id": "Y1-A", "name": "B.Tech Year 1, Section A" },
+      { "id": "Y1-B", "name": "B.Tech Year 1, Section B" }
+    ],
+    "roomImpact": {
+      "before": { "id": "LH-1", "name": "Lecture Hall 1" },
+      "after": { "id": "LH-1", "name": "Lecture Hall 1", "building": "Lecture Hall Complex", "capacity": 200 },
+      "violations": [],
+      "validForSession": true
+    },
+    "conflictsIntroduced": [],
+    "studentGapChange": 0,
+    "studentGapChanges": [
+      { "groupId": "Y1-A", "groupName": "B.Tech Year 1, Section A", "day": "MON", "beforeGapCount": 0, "afterGapCount": 1, "difference": 1, "beforeGapPeriods": [], "afterGapPeriods": [3] },
+      { "groupId": "Y1-B", "groupName": "B.Tech Year 1, Section B", "day": "MON", "beforeGapCount": 0, "afterGapCount": 1, "difference": 1, "beforeGapPeriods": [], "afterGapPeriods": [3] }
+    ],
+    "studentGapPeriodChange": 1,
+    "facultyDailyHours": {
+      "before": 2,
+      "after": 2,
+      "difference": 0,
+      "byDay": [{ "day": "MON", "before": 2, "after": 2, "difference": 0 }]
+    },
+    "hardViolationCount": 0,
+    "softPenalty": { "before": 10, "after": 10, "difference": 0 }
+  }
+}

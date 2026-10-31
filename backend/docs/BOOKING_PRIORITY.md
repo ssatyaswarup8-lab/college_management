@@ -1,0 +1,5 @@
+# Booking Priority Rules
+
+Booking priority comes from the active dataset, not from client-supplied values. `priority_order` lists categories from highest to lowest priority. The backend applies the requester's `role_category_cap` through `effectiveCategory`; the resulting category and one-based rank are returned on pending queue items.
+
+The Admin and department-coordinator priority queue orders requests by effective rank and then original submission time. Department coordinators only see requests for their own department. When a proposal uses a room explicitly requested by a higher-priority pending request or overlaps its mandatory attendees during an allowed window, the API requires an Admin to provide a recorded override reason. Acceptance of an offered alternative repeats this check so newly submitted higher-priority requests are considered. This check does not automatically displace or reject the other request. Every approval, rejection, or alternative offer stores the effective category and rank; approved overrides also store the reason and affected request IDs.

@@ -1,0 +1,2 @@
+const TYPES=[['lecture','Lecture','bg-sky-50 border-sky-500'],['tutorial','Tutorial','bg-violet-50 border-violet-500'],['lab','Lab','bg-amber-50 border-amber-500'],['event','Event','bg-emerald-50 border-emerald-500']]
+export default function TimetableLegend(){return <div aria-label="Session type legend" className="flex flex-wrap gap-3">{TYPES.map(([key,label,style])=><span className="inline-flex items-center gap-2 text-xs text-slate-600" key={key}><span aria-hidden="true" className={`h-3 w-3 rounded-sm border-l-4 ${style}`}/>{label}</span>)}</div>}

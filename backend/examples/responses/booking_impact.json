@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "message": "Booking impact analyzed; no decision was saved",
+  "data": {
+    "requestId": "BR-01",
+    "action": "approve",
+    "proposedPlacement": {
+      "day": "MON",
+      "startPeriod": 4,
+      "roomId": "AUD",
+      "endPeriod": 5
+    },
+    "room": {
+      "id": "AUD",
+      "name": "Main Auditorium",
+      "building": "Admin Block",
+      "capacity": 500,
+      "type": "auditorium"
+    },
+    "available": true,
+    "decisionBlockers": [],
+    "impact": {
+      "conflictCount": 0,
+      "conflictCodes": [],
+      "affectedSessions": [],
+      "affectedBookings": [],
+      "affectedFaculty": [],
+      "affectedGroups": [],
+      "higherPriorityRequests": [],
+      "priorityOverrideAllowed": true,
+      "requiresAdminPriorityOverride": false
+    }
+  }
+}

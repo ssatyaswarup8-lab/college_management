@@ -1,0 +1,10 @@
+{
+  "day": "WED",
+  "startPeriod": 6,
+  "duration": 1,
+  "attendance": 80,
+  "roomTypes": ["lecture_hall"],
+  "needs": ["projector"],
+  "use": "lecture",
+  "originRoomId": "LH-1"
+}

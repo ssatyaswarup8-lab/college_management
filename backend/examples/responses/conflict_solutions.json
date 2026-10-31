@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Valid solutions and explanatory near misses generated",
+  "data": {
+    "conflictId": "<conflict-id-returned-by-analysis>",
+    "solutions": [
+      {
+        "placement": { "sessionId": "MA101-AB-L1", "day": "MON", "startPeriod": 2, "roomId": "LH-2" },
+        "valid": true,
+        "impact": {
+          "timeChanged": false,
+          "roomOnlyChanged": true,
+          "softPenaltyBefore": 12,
+          "softPenaltyAfter": 12,
+          "softPenaltyDifference": 0,
+          "affectedFaculty": ["F19"],
+          "affectedGroups": ["Y1-A", "Y1-B"],
+          "affectedRooms": ["LH-1", "LH-2"],
+          "conflictsIntroduced": [],
+          "studentGapChange": 0,
+          "facultyDailyHours": { "after": 3, "limit": 4, "overLimitBy": 0 }
+        },
+        "rankScore": 0.2
+      }
+    ],
+    "nearMisses": [
+      {
+        "placement": { "sessionId": "MA101-AB-L1", "day": "MON", "startPeriod": 2, "roomId": "CR-101" },
+        "valid": false,
+        "violationCount": 1,
+        "violations": [
+          {
+            "code": "ROOM_CAPACITY_INSUFFICIENT",
+            "message": "Room capacity 90 is below session size 180.",
+            "details": { "sessionId": "MA101-AB-L1", "roomId": "CR-101", "capacity": 90, "size": 180 }
+          }
+        ],
+        "fromReportedProposal": true,
+        "rank": 1,
+        "rankReasons": ["Room capacity 90 is below session size 180."]
+      }
+    ],
+    "note": "Near-miss options contain hard violations and cannot be applied. Apply only a valid solution."
+  }
+}

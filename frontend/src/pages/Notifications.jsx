@@ -1,0 +1,10 @@
+import { useQueryClient } from '@tanstack/react-query'
+import useNotifications,{notificationKeys,useNotificationActions} from '../hooks/useNotifications.js'
+import NotificationList from '../components/notifications/NotificationList.jsx'
+import ErrorState from '../components/common/ErrorState.jsx'
+import LoadingState from '../components/common/LoadingState.jsx'
+import PageHeader from '../components/common/PageHeader.jsx'
+import {useToast} from '../components/common/ToastProvider.jsx'
+function unwrap(r){return r?.data?.data??r?.data??r}
+function list(r){const d=unwrap(r);return Array.isArray(d)?d:d?.notifications??d?.items??[]}
+export default function Notifications(){const client=useQueryClient();const query=useNotifications({});const actions=useNotificationActions();const{toast}=useToast();const items=list(query.data);async function markRead(id){try{await actions.markAsRead.mutateAsync(id);toast('Notification marked as read.',{type:'success'})}catch{toast('Unable to mark notification as read.',{type:'error'})}}async function markAll(){try{await actions.markAllAsRead.mutateAsync({});await client.invalidateQueries({queryKey:notificationKeys.all});toast('All notifications marked as read.',{type:'success'})}catch{toast('Unable to update notifications.',{type:'error'})}}const unread=items.filter((n)=>!(n.readAt??n.read_at??n.isRead??n.is_read)).length;return <div className="space-y-5"><PageHeader eyebrow="Your updates" title="Notifications" description="Schedule changes, booking decisions, and campus updates returned by the notification service." actions={<button className="min-h-10 rounded-lg border border-slate-300 bg-white px-4 text-sm font-semibold text-slate-700 disabled:opacity-50" disabled={!unread||actions.markAllAsRead.isPending} onClick={markAll} type="button">Mark all read</button>}/>{query.isLoading?<LoadingState label="Loading notifications"/>:null}{query.isError?<ErrorState title="Unable to load notifications" message="The notification service could not be reached." onRetry={()=>query.refetch()}/>:null}{query.isSuccess?<NotificationList notifications={items} onRead={markRead}/>:null}</div>}

@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "rooms": [
+      {
+        "room": {
+          "sourceId": "<available-room-id>",
+          "name": "<room name from active dataset>",
+          "building": "Lecture Hall Complex",
+          "type": "lecture_hall",
+          "capacity": 120,
+          "features": ["projector"]
+        },
+        "available": true,
+        "reason": null,
+        "locationPreference": {
+          "originRoomId": "LH-1",
+          "originBuilding": "Lecture Hall Complex",
+          "sameBuilding": true,
+          "distanceMeters": null
+        },
+        "rankReasons": [
+          "Available for the requested slot",
+          "Same building as origin (Lecture Hall Complex)",
+          "Capacity fit: 120 seats for 80 attendees",
+          "All requested features are available"
+        ]
+      }
+    ]
+  }
+}

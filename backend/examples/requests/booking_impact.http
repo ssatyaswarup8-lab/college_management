@@ -1,0 +1,6 @@
+### Preview approval impact for bundled booking BR-01
+POST http://localhost:5000/api/bookings/BR-01/impact
+Authorization: Bearer {{admin_access_token}}
+Content-Type: application/json
+
+< ./booking_impact.json

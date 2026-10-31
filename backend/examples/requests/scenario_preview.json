@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "type": "room_unavailable",
+      "roomId": "LH-1",
+      "days": ["WED"],
+      "periods": [1, 2, 3, 4, 5],
+      "reason": "Maintenance"
+    }
+  ]
+}

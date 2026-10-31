@@ -1,0 +1,13 @@
+{
+  "title": "Faculty leave on Wednesday",
+  "description": "Evaluate repair options for the affected sessions.",
+  "changes": [
+    {
+      "type": "faculty_unavailable",
+      "faculty_id": "F19",
+      "days": ["WED"],
+      "periods": [3],
+      "reason": "Approved leave"
+    }
+  ]
+}

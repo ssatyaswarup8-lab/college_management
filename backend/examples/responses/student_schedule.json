@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "message": "Student timetable loaded",
+  "data": {
+    "studentGroupIds": ["Y1-A"],
+    "scheduleVersionId": "<active-schedule-version-id>",
+    "classes": [
+      {
+        "sessionId": "MA101-AB-L1",
+        "courseId": "MA101",
+        "courseTitle": "<course title from active dataset>",
+        "kind": "lecture",
+        "day": "MON",
+        "startPeriod": 2,
+        "endPeriod": 2,
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "roomId": "LH-1",
+        "roomName": "Lecture Hall 1",
+        "building": "Lecture Hall Complex",
+        "facultyId": "F19",
+        "facultyName": "Dr. Shalini Gupta",
+        "groups": ["Y1-A", "Y1-B"]
+      }
+    ]
+  }
+}

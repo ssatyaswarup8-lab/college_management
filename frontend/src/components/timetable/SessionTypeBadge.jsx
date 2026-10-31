@@ -1,0 +1,2 @@
+const STYLES={lecture:'border-sky-200 bg-sky-50 text-sky-800',tutorial:'border-violet-200 bg-violet-50 text-violet-800',lab:'border-amber-200 bg-amber-50 text-amber-900',event:'border-emerald-200 bg-emerald-50 text-emerald-800'}
+export default function SessionTypeBadge({type='lecture'}){const normalized=String(type).toLowerCase();return <span className={`inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${STYLES[normalized]??'border-slate-200 bg-slate-50 text-slate-700'}`}>{normalized.replaceAll('_',' ')}</span>}

@@ -1,0 +1,547 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #152536;
+  background: #f5f7fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  outline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid #56a3a0;
+}
+
+.app-shell {
+  background: #f5f7fb;
+}
+
+.app-main {
+  background:
+    radial-gradient(ellipse at 92% 0%, rgb(14 116 144 / 4%), transparent 32%),
+    #f5f7fb;
+}
+
+.app-content > .space-y-6 > * + * {
+  margin-top: 1.75rem;
+}
+
+.app-content .rounded-xl.border.bg-white,
+.app-content article.rounded-2xl.border.bg-white,
+.app-content section.rounded-2xl.border.bg-white {
+  border-color: #e3eaf2 !important;
+  border-radius: 1rem;
+  box-shadow: 0 8px 28px rgb(15 23 42 / 4%);
+}
+
+.app-page-header {
+  border-color: #dfe7ef !important;
+}
+
+.app-page-header h1 {
+  color: #10283d !important;
+  letter-spacing: -0.035em;
+}
+
+.app-content input,
+.app-content select,
+.app-content textarea {
+  min-height: 2.75rem;
+  border-color: #cbd6e2;
+  border-radius: 0.65rem;
+  background-color: #fff;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.app-content input:focus,
+.app-content select:focus,
+.app-content textarea:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgb(15 118 110 / 12%);
+  outline: none;
+}
+
+.app-content button:not([class*='rounded-full']) {
+  border-radius: 0.65rem;
+}
+
+.startup-screen {
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(220 235 235 / 70%), transparent 48%),
+    #f5f7fa;
+}
+
+.startup-panel {
+  width: min(100%, 460px);
+  padding: 48px 40px;
+  border: 1px solid #e3e9ed;
+  border-radius: 18px;
+  background: rgb(255 255 255 / 92%);
+  box-shadow: 0 18px 60px rgb(23 48 66 / 8%);
+  text-align: center;
+}
+
+.brand-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 24px;
+  border-radius: 14px;
+  background: #173b4b;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  place-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #607684;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.startup-panel h1 {
+  margin: 0;
+  color: #173b4b;
+  font-size: clamp(28px, 7vw, 36px);
+  letter-spacing: -0.04em;
+}
+
+.startup-copy {
+  margin: 12px 0 28px;
+  color: #617482;
+  font-size: 15px;
+}
+
+.startup-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: #f0f7f4;
+  color: #376b57;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4b9a75;
+}
+
+@media (max-width: 480px) {
+  .startup-panel {
+    padding: 36px 24px;
+  }
+}
+
+/* Landing page theme: explicit CSS keeps the dark palette reliable across Tailwind builds. */
+.landing-shell {
+  min-height: 100vh;
+  color: #f8fafc;
+  background-color: #03172d !important;
+}
+
+.landing-header {
+  background-color: rgb(6 29 57 / 96%) !important;
+  border-color: rgb(148 163 184 / 18%) !important;
+}
+
+.landing-header a,
+.landing-header span {
+  color: inherit;
+}
+
+.landing-header-brand {
+  color: #f8fafc !important;
+}
+
+.landing-header-subtitle {
+  color: #cbd5e1 !important;
+}
+
+.landing-hero {
+  position: relative;
+  isolation: isolate;
+  background-color: #061d39;
+  background-image: radial-gradient(ellipse at 76% 45%, rgb(14 116 180 / 17%), transparent 38%), linear-gradient(180deg, #071d38, #03172d);
+}
+
+.landing-hero-art {
+  z-index: 0;
+  background-color: #071d35;
+  background-image:
+    linear-gradient(90deg, #03172d 0%, rgb(3 23 45 / 96%) 31%, rgb(3 23 45 / 68%) 57%, rgb(3 23 45 / 48%) 100%),
+    linear-gradient(0deg, #03172d 0%, rgb(3 23 45 / 8%) 48%),
+    url('/campus-building.png');
+  background-position: center, center, 66% center;
+  background-size: cover, cover, auto 100%;
+  background-repeat: no-repeat;
+}
+
+.landing-hero-content {
+  z-index: 1;
+  color: #f8fafc;
+}
+
+.landing-hero-kicker {
+  color: #7dd3fc;
+}
+
+.landing-hero-copy {
+  color: #c4d2e2;
+}
+
+.landing-operations-panel {
+  color: #f8fafc;
+  border-color: rgb(56 189 248 / 42%) !important;
+  background-color: rgb(6 29 57 / 94%) !important;
+  box-shadow: 0 28px 70px rgb(0 0 0 / 34%);
+}
+
+.landing-operations-panel p,
+.landing-operations-panel li {
+  color: #e2e8f0;
+}
+
+.landing-operations-icon {
+  color: #7dd3fc;
+  background-color: rgb(59 130 246 / 22%);
+}
+
+.landing-check {
+  color: #052e24;
+  background-color: #34d399 !important;
+}
+
+.landing-campus-frame {
+  border: 1px solid rgb(148 195 220 / 34%);
+  background: linear-gradient(145deg, rgb(148 195 220 / 17%), rgb(255 255 255 / 4%));
+  box-shadow: 0 32px 80px rgb(0 0 0 / 35%), 0 0 0 1px rgb(255 255 255 / 3%) inset;
+}
+
+.landing-campus-image {
+  display: block;
+  aspect-ratio: 1.64;
+  object-position: center 48%;
+  box-shadow: 0 14px 38px rgb(0 0 0 / 28%);
+}
+
+.landing-campus-caption {
+  border-color: rgb(186 230 253 / 24%) !important;
+  background: rgb(4 22 42 / 87%) !important;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 28%);
+  backdrop-filter: blur(12px);
+}
+
+.landing-signin {
+  color: #e0f2fe !important;
+  border-color: rgb(56 189 248 / 50%) !important;
+  background-color: rgb(14 165 233 / 12%) !important;
+}
+
+.landing-signin:hover {
+  background-color: rgb(14 165 233 / 24%) !important;
+}
+
+.landing-badge {
+  color: #dbeafe;
+  border-color: rgb(96 165 250 / 40%);
+  background-color: rgb(15 39 78 / 82%);
+}
+
+.landing-brand-accent {
+  color: #0ea5e9 !important;
+}
+
+.landing-cta-primary {
+  color: #fff !important;
+  background: linear-gradient(100deg, #2563eb, #0ea5e9) !important;
+  box-shadow: 0 12px 30px rgb(2 8 23 / 35%);
+}
+
+.landing-cta-primary:hover {
+  filter: brightness(1.1);
+}
+
+.landing-cta-secondary {
+  color: #f8fafc !important;
+  border-color: rgb(56 189 248 / 70%) !important;
+  background-color: rgb(6 29 57 / 82%) !important;
+}
+
+.landing-cta-secondary:hover {
+  background-color: rgb(12 74 110 / 65%) !important;
+}
+
+.landing-feature-card {
+  color: #f8fafc;
+}
+
+.landing-feature-card h2,
+.landing-feature-card p {
+  color: #f8fafc;
+}
+
+.landing-feature-card p {
+  color: #cbd5e1;
+}
+
+.landing-feature-card[data-accent='emerald'] { border-color: rgb(16 185 129 / 55%) !important; background-color: rgb(6 78 59 / 48%) !important; }
+.landing-feature-card[data-accent='violet'] { border-color: rgb(139 92 246 / 58%) !important; background-color: rgb(76 29 149 / 40%) !important; }
+.landing-feature-card[data-accent='orange'] { border-color: rgb(249 115 22 / 58%) !important; background-color: rgb(124 45 18 / 42%) !important; }
+.landing-feature-card[data-accent='rose'] { border-color: rgb(244 63 94 / 58%) !important; background-color: rgb(136 19 55 / 40%) !important; }
+.landing-feature-card[data-accent='cyan'] { border-color: rgb(6 182 212 / 58%) !important; background-color: rgb(8 65 92 / 54%) !important; }
+.landing-feature-card[data-accent='blue'] { border-color: rgb(59 130 246 / 58%) !important; background-color: rgb(30 58 138 / 42%) !important; }
+
+.landing-footer {
+  color: #cbd5e1;
+  border-color: rgb(148 163 184 / 18%) !important;
+  background-color: #041a33 !important;
+}
+
+.landing-dataset > div {
+  color: #f8fafc;
+  border-color: rgb(59 130 246 / 42%) !important;
+  background: linear-gradient(100deg, #071d38, #082345 50%, #071d38) !important;
+}
+
+.landing-dataset h2,
+.landing-dataset p,
+.landing-dataset dt,
+.landing-dataset dd {
+  color: inherit;
+}
+
+.landing-stat-icon { color: #7dd3fc; }
+.landing-stat:nth-child(2) .landing-stat-icon { color: #c4b5fd; }
+.landing-stat:nth-child(3) .landing-stat-icon { color: #fcd34d; }
+.landing-stat:nth-child(4) .landing-stat-icon { color: #93c5fd; }
+.landing-stat:nth-child(5) .landing-stat-icon { color: #67e8f9; }
+.landing-stat:nth-child(6) .landing-stat-icon { color: #38bdf8; }
+.landing-stat:nth-child(7) .landing-stat-icon { color: #a5b4fc; }
+
+@media (max-width: 640px) {
+  .landing-hero-art {
+    background-image:
+      linear-gradient(90deg, rgb(3 23 45 / 94%), rgb(3 23 45 / 78%)),
+      linear-gradient(0deg, #03172d 0%, rgb(3 23 45 / 20%) 55%),
+      url('/campus-building.png');
+    background-position: center, center, 70% center;
+    background-size: cover, cover, auto 72%;
+  }
+}
+
+.auth-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f8fafc;
+  background-color: #03172d;
+  background-image:
+    radial-gradient(ellipse at 17% 42%, rgb(14 116 180 / 25%), transparent 42%),
+    radial-gradient(ellipse at 82% 12%, rgb(14 165 233 / 14%), transparent 32%),
+    linear-gradient(125deg, #061d39, #03172d 70%);
+}
+
+.auth-page::before {
+  position: absolute;
+  z-index: -1;
+  top: 84px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  content: '';
+  opacity: .32;
+  background-image:
+    linear-gradient(90deg, rgb(3 23 45 / 48%), rgb(3 23 45 / 24%) 55%, #03172d 100%),
+    linear-gradient(0deg, #03172d 0%, transparent 44%),
+    url('/campus-building.png');
+  background-position: center, center, center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  mask-image: none;
+}
+
+.auth-header {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid rgb(148 163 184 / 16%);
+  background: #061d39;
+}
+
+.auth-home-link {
+  color: #dbeafe;
+  border: 1px solid rgb(125 211 252 / 30%);
+  background: rgb(14 165 233 / 10%);
+}
+
+.auth-home-link:hover {
+  background: rgb(14 165 233 / 20%);
+}
+
+.auth-eyebrow {
+  color: #7dd3fc;
+}
+
+.auth-chip {
+  border: 1px solid rgb(125 211 252 / 24%);
+  background: rgb(15 40 70 / 72%);
+}
+
+.auth-highlight {
+  border-color: rgb(125 211 252 / 18%) !important;
+  background: linear-gradient(120deg, rgb(15 45 76 / 78%), rgb(8 32 58 / 76%)) !important;
+  box-shadow: 0 12px 28px rgb(0 0 0 / 12%);
+}
+
+.auth-highlight-icon {
+  color: #7dd3fc;
+  border: 1px solid rgb(56 189 248 / 22%);
+  background: rgb(14 165 233 / 12%);
+}
+
+.auth-highlight-copy {
+  color: #a9bacd;
+}
+
+.auth-panel {
+  position: relative;
+  overflow: hidden;
+  border-color: rgb(125 211 252 / 30%) !important;
+  background: linear-gradient(145deg, rgb(10 39 68 / 97%), rgb(5 22 42 / 98%)) !important;
+  box-shadow: 0 34px 100px rgb(0 0 0 / 48%), inset 0 1px rgb(255 255 255 / 8%);
+  backdrop-filter: blur(14px);
+}
+
+.auth-panel::before {
+  position: absolute;
+  top: 0;
+  right: 8%;
+  left: 8%;
+  height: 1px;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgb(125 211 252 / 75%), transparent);
+}
+
+.auth-panel-footer {
+  border-color: rgb(148 163 184 / 20%) !important;
+}
+
+.auth-secure-label {
+  color: #a5f3fc;
+  border: 1px solid rgb(34 211 238 / 22%);
+  background: rgb(8 145 178 / 12%);
+}
+
+.auth-muted {
+  color: #a9bacd !important;
+}
+
+.auth-label {
+  color: #e2e8f0 !important;
+}
+
+.auth-input {
+  color: #f8fafc !important;
+  border-color: rgb(148 163 184 / 32%) !important;
+  background-color: rgb(7 28 51 / 92%) !important;
+}
+
+.auth-input::placeholder {
+  color: #879bb1 !important;
+}
+
+.auth-input:focus {
+  border-color: #38bdf8 !important;
+  outline: 2px solid rgb(56 189 248 / 24%);
+}
+
+.auth-input:-webkit-autofill,
+.auth-input:-webkit-autofill:hover,
+.auth-input:-webkit-autofill:focus,
+.auth-input:autofill {
+  -webkit-text-fill-color: #f8fafc !important;
+  caret-color: #f8fafc;
+  -webkit-box-shadow: 0 0 0 1000px #0b2744 inset !important;
+  box-shadow: 0 0 0 1000px #0b2744 inset !important;
+}
+
+.auth-input option {
+  color: #f8fafc;
+  background-color: #071c33;
+}
+
+.auth-submit {
+  color: white !important;
+  background: linear-gradient(100deg, #2563eb, #0ea5e9) !important;
+  box-shadow: 0 12px 25px rgb(2 8 23 / 30%);
+}
+
+.auth-submit:hover {
+  filter: brightness(1.08);
+}
+
+.auth-error {
+  color: #fecaca;
+  border-color: rgb(248 113 113 / 35%);
+  background-color: rgb(127 29 29 / 35%);
+}
+
+.auth-notice {
+  color: #fde68a;
+  border-color: rgb(251 191 36 / 35%);
+  background-color: rgb(120 53 15 / 30%);
+}
+
+.auth-footer {
+  position: relative;
+  z-index: 1;
+  color: #94a3b8;
+}
+
+@media (max-width: 1023px) {
+  .auth-page::before {
+    width: 100%;
+    opacity: .22;
+    mask-image: linear-gradient(180deg, black 0%, transparent 80%);
+  }
+}

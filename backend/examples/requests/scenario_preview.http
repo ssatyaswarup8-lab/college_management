@@ -1,0 +1,6 @@
+### Preview a temporary disruption (read-only)
+POST http://localhost:5000/api/scenarios/preview
+Authorization: Bearer {{admin_access_token}}
+Content-Type: application/json
+
+< ./scenario_preview.json

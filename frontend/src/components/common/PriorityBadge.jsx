@@ -1,0 +1,3 @@
+const PRIORITIES={exam:1,exams:1,regular_class:2,class:2,institute_event:3,guest_lecture:4,department_event:5,club_event:6}
+const LABELS={1:'Exam',2:'Regular class',3:'Institute event',4:'Guest lecture',5:'Department event',6:'Club event'}
+export default function PriorityBadge({priority,category,className=''}){const key=String(category??'').toLowerCase();const rank=Number(priority)||PRIORITIES[key];if(!rank)return null;const label=LABELS[rank]??category??`Priority ${rank}`;return <span className={`inline-flex items-center rounded-full border border-slate-300 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700 ${className}`.trim()} aria-label={`Priority ${rank}: ${label}`}>P{rank} · {label}</span>}

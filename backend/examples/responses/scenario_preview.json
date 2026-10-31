@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "message": "Scenario impact preview generated; no scenario or schedule was saved",
+  "data": {
+    "baseVersion": {
+      "id": "<active-schedule-version-id>",
+      "versionNumber": 1
+    },
+    "temporaryChanges": [
+      {
+        "type": "room_unavailable",
+        "roomId": "LH-1",
+        "days": ["WED"],
+        "periods": [1, 2, 3, 4, 5],
+        "reason": "Maintenance"
+      }
+    ],
+    "summary": {
+      "directlyAffectedSessions": 1,
+      "affectedGroups": ["Y1-A", "Y1-B"],
+      "affectedFaculty": ["F19"],
+      "affectedRooms": ["LH-1"]
+    },
+    "impactedSessions": [
+      {
+        "sessionId": "MA101-AB-L1",
+        "courseId": "MA101",
+        "kind": "lecture",
+        "groups": ["Y1-A", "Y1-B"],
+        "facultyId": "F19",
+        "day": "WED",
+        "startPeriod": 2,
+        "roomId": "LH-1",
+        "violations": [
+          {
+            "code": "ROOM_UNAVAILABLE",
+            "message": "Room LH-1 is unavailable during this slot.",
+            "details": {
+              "sessionId": "MA101-AB-L1",
+              "roomId": "LH-1",
+              "day": "WED",
+              "periods": [2]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

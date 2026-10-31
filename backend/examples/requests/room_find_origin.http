@@ -1,0 +1,6 @@
+### Find a room near the Lecture Hall Complex (same-building preference)
+POST http://localhost:5000/api/rooms/find
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+< ./room_find_origin.json

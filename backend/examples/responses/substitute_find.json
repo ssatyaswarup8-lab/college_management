@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "message": "Substitute candidates evaluated",
+  "data": {
+    "session": {
+      "sessionId": "MA101-AB-L1",
+      "courseId": "MA101",
+      "courseTitle": "Calculus and Linear Algebra",
+      "currentFacultyId": "F19",
+      "originalFacultyId": "F19",
+      "day": "MON",
+      "startPeriod": 2,
+      "roomId": "LH-1"
+    },
+    "candidates": [
+      {
+        "facultyId": "F20",
+        "name": "Dr. Prakash Nayak",
+        "department": "MA",
+        "eligible": true,
+        "reasons": [],
+        "eligibilityChecks": {
+          "qualification": { "passed": true, "courseId": "MA101", "note": "Admin-verified for calculus lectures" },
+          "schedule": { "passed": true, "violations": [] },
+          "dailyWorkload": {
+            "passed": true,
+            "day": "MON",
+            "currentHours": 1,
+            "hoursAfterAssignment": 2,
+            "dailyLimit": 4,
+            "remainingHours": 2
+          }
+        },
+        "qualificationNote": "Admin-verified for calculus lectures",
+        "dailyHoursAfterAssignment": 2,
+        "dailyLimit": 4,
+        "timetableImpact": { "sessionsMoved": 0, "groupsAffected": ["Y1-A", "Y1-B"], "roomId": "LH-1", "day": "MON", "startPeriod": 2 },
+        "rankReasons": [
+          "Same department as the course.",
+          "Daily load after assignment: 2/4 hours on MON.",
+          "Meets qualification and schedule constraints.",
+          "The class stays in the same room and time slot; no other session needs to move."
+        ],
+        "rank": 1
+      }
+    ],
+    "recommended": "F20",
+    "recommendationReason": "Highest-ranked eligible candidate, ordered by department match, daily teaching load, and faculty ID.",
+    "recommendedCandidate": { "facultyId": "F20", "name": "Dr. Prakash Nayak", "rank": 1 }
+  }
+}

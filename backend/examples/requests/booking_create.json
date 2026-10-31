@@ -1,0 +1,14 @@
+{
+  "requestedCategory": "institute_event",
+  "title": "Department seminar",
+  "attendance": 40,
+  "durationPeriods": 2,
+  "windows": [
+    { "day": "WED", "fromPeriod": 6, "toPeriod": 7 }
+  ],
+  "roomTypes": ["lecture_hall"],
+  "needs": ["projector"],
+  "requestedRoom": "LH-1",
+  "mandatoryForGroups": ["Y1-A"],
+  "rawText": "Department seminar request"
+}
